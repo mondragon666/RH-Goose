@@ -1,0 +1,262 @@
+{
+ "frog": [
+  {
+   "src": "animals/frog_1.png",
+   "trait": "plain"
+  },
+  {
+   "src": "animals/frog_2.png",
+   "trait": "shades"
+  },
+  {
+   "src": "animals/frog_3.png",
+   "trait": "cap"
+  },
+  {
+   "src": "animals/frog_4.png",
+   "trait": "crown + chain"
+  },
+  {
+   "src": "animals/frog_5.png",
+   "trait": "bandana + cigar"
+  },
+  {
+   "src": "animals/frog_6.png",
+   "trait": "berries (rare)"
+  }
+ ],
+ "cat": [
+  {
+   "src": "animals/cat_1.png",
+   "trait": "plain"
+  },
+  {
+   "src": "animals/cat_2.png",
+   "trait": "shades"
+  },
+  {
+   "src": "animals/cat_3.png",
+   "trait": "cap"
+  },
+  {
+   "src": "animals/cat_4.png",
+   "trait": "crown + chain"
+  },
+  {
+   "src": "animals/cat_5.png",
+   "trait": "bandana + cigar"
+  },
+  {
+   "src": "animals/cat_6.png",
+   "trait": "berries (rare)"
+  }
+ ],
+ "cow": [
+  {
+   "src": "animals/cow_1.png",
+   "trait": "plain"
+  },
+  {
+   "src": "animals/cow_2.png",
+   "trait": "shades"
+  },
+  {
+   "src": "animals/cow_3.png",
+   "trait": "cap"
+  },
+  {
+   "src": "animals/cow_4.png",
+   "trait": "crown + chain"
+  },
+  {
+   "src": "animals/cow_5.png",
+   "trait": "bandana + cigar"
+  },
+  {
+   "src": "animals/cow_6.png",
+   "trait": "berries (rare)"
+  }
+ ],
+ "rabbit": [
+  {
+   "src": "animals/rabbit_1.png",
+   "trait": "plain"
+  },
+  {
+   "src": "animals/rabbit_2.png",
+   "trait": "shades"
+  },
+  {
+   "src": "animals/rabbit_3.png",
+   "trait": "cap"
+  },
+  {
+   "src": "animals/rabbit_4.png",
+   "trait": "crown + chain"
+  },
+  {
+   "src": "animals/rabbit_5.png",
+   "trait": "bandana + cigar"
+  },
+  {
+   "src": "animals/rabbit_6.png",
+   "trait": "berries (rare)"
+  }
+ ],
+ "pig": [
+  {
+   "src": "animals/pig_1.png",
+   "trait": "plain"
+  },
+  {
+   "src": "animals/pig_2.png",
+   "trait": "shades"
+  },
+  {
+   "src": "animals/pig_3.png",
+   "trait": "cap"
+  },
+  {
+   "src": "animals/pig_4.png",
+   "trait": "crown + chain"
+  },
+  {
+   "src": "animals/pig_5.png",
+   "trait": "bandana + cigar"
+  },
+  {
+   "src": "animals/pig_6.png",
+   "trait": "berries (rare)"
+  }
+ ],
+ "panda": [
+  {
+   "src": "animals/panda_1.png",
+   "trait": "plain"
+  },
+  {
+   "src": "animals/panda_2.png",
+   "trait": "shades"
+  },
+  {
+   "src": "animals/panda_3.png",
+   "trait": "cap"
+  },
+  {
+   "src": "animals/panda_4.png",
+   "trait": "crown + chain"
+  },
+  {
+   "src": "animals/panda_5.png",
+   "trait": "bandana + cigar"
+  },
+  {
+   "src": "animals/panda_6.png",
+   "trait": "berries (rare)"
+  }
+ ],
+ "fish": [
+  {
+   "src": "animals/fish_1.png",
+   "trait": "plain"
+  },
+  {
+   "src": "animals/fish_2.png",
+   "trait": "shades"
+  },
+  {
+   "src": "animals/fish_3.png",
+   "trait": "cap"
+  },
+  {
+   "src": "animals/fish_4.png",
+   "trait": "crown + chain"
+  },
+  {
+   "src": "animals/fish_5.png",
+   "trait": "bandana + cigar"
+  },
+  {
+   "src": "animals/fish_6.png",
+   "trait": "berries (rare)"
+  }
+ ],
+ "robot": [
+  {
+   "src": "animals/robot_1.png",
+   "trait": "plain"
+  },
+  {
+   "src": "animals/robot_2.png",
+   "trait": "shades"
+  },
+  {
+   "src": "animals/robot_3.png",
+   "trait": "cap"
+  },
+  {
+   "src": "animals/robot_4.png",
+   "trait": "crown + chain"
+  },
+  {
+   "src": "animals/robot_5.png",
+   "trait": "bandana + cigar"
+  },
+  {
+   "src": "animals/robot_6.png",
+   "trait": "berries (rare)"
+  }
+ ],
+ "alien": [
+  {
+   "src": "animals/alien_1.png",
+   "trait": "plain"
+  },
+  {
+   "src": "animals/alien_2.png",
+   "trait": "shades"
+  },
+  {
+   "src": "animals/alien_3.png",
+   "trait": "cap"
+  },
+  {
+   "src": "animals/alien_4.png",
+   "trait": "crown + chain"
+  },
+  {
+   "src": "animals/alien_5.png",
+   "trait": "bandana + cigar"
+  },
+  {
+   "src": "animals/alien_6.png",
+   "trait": "berries (rare)"
+  }
+ ],
+ "owl": [
+  {
+   "src": "animals/owl_1.png",
+   "trait": "plain"
+  },
+  {
+   "src": "animals/owl_2.png",
+   "trait": "shades"
+  },
+  {
+   "src": "animals/owl_3.png",
+   "trait": "cap"
+  },
+  {
+   "src": "animals/owl_4.png",
+   "trait": "crown + chain"
+  },
+  {
+   "src": "animals/owl_5.png",
+   "trait": "bandana + cigar"
+  },
+  {
+   "src": "animals/owl_6.png",
+   "trait": "berries (rare)"
+  }
+ ]
+}
