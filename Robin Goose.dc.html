@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #0B0B09; color: #F4F5EE; font-family: "Space Mono", ui-monospace, monospace; -webkit-font-smoothing: antialiased; }
+  img { display: block; image-rendering: pixelated; }
+  a { color: #C8F702; text-decoration: none; }
+  a:hover { color: #E4FF6B; }
+  ::selection { background: #C8F702; color: #0B0B09; }
+  @keyframes rg-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes rg-bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+  @media (max-width: 900px) {
+    [data-rg="hero"], [data-rg="origin"] { grid-template-columns: 1fr !important; }
+    [data-rg="hero"] { padding: 56px 20px 48px !important; gap: 36px !important; }
+    [data-rg="hero-art"] { order: -1; }
+    [data-rg="h1"] { font-size: clamp(34px, 10vw, 72px) !important; }
+    [data-rg="h2"] { font-size: clamp(28px, 7.6vw, 46px) !important; }
+    [data-rg="nav"] { gap: 14px !important; font-size: 11px !important; }
+    [data-rg="pad"] { padding-left: 20px !important; padding-right: 20px !important; }
+    [data-rg="origin-art"] { max-width: 420px; }
+    [data-rg="origin-art"] img { margin-top: 0 !important; }
+  }
+</style>
+<meta name="ext-resource-dependency" content="img/goose_0001.png">
+<meta name="ext-resource-dependency" content="img/goose_0004.png">
+<meta name="ext-resource-dependency" content="img/goose_0005.png">
+<meta name="ext-resource-dependency" content="img/goose_0007.png">
+<meta name="ext-resource-dependency" content="img/goose_0011.png">
+<meta name="ext-resource-dependency" content="img/goose_0012.png">
+<meta name="ext-resource-dependency" content="img/goose_0013.png">
+<meta name="ext-resource-dependency" content="img/goose_0014.png">
+<meta name="ext-resource-dependency" content="img/goose_0017.png">
+<meta name="ext-resource-dependency" content="img/goose_0018.png">
+<meta name="ext-resource-dependency" content="img/goose_0019.png">
+<meta name="ext-resource-dependency" content="img/goose_0020.png">
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#C8F702"/><rect x="30" y="30" width="40" height="26" fill="#0B0B09"/><rect x="37" y="37" width="8" height="8" fill="#fff"/><rect x="24" y="56" width="52" height="10" fill="#D14BAE"/></svg></template>
+</helmet>
+
+<div style="min-height:100vh;overflow-x:hidden">
+
+  <header style="position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 28px;background:rgba(11,11,9,0.88);backdrop-filter:blur(10px);border-bottom:2px solid #1E1F19">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;color:#F4F5EE;font-family:'Silkscreen',monospace;font-size:15px;letter-spacing:0.06em">
+      <span style="display:block;width:18px;height:18px;background:#C8F702"></span>
+      ROBIN&nbsp;GOOSE
+    </a>
+    <nav data-rg="nav" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:22px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase">
+      <a href="#flock" style="color:#9B9D90">Flock</a>
+      <a href="#numbers" style="color:#9B9D90">Numbers</a>
+      <a href="#origin" style="color:#9B9D90">Origin</a>
+      <a href="https://x.com/rhgoose" target="_blank" rel="noopener" style="padding:9px 16px;background:#C8F702;color:#0B0B09;font-weight:700" style-hover="background:#E4FF6B">X ↗</a>
+    </nav>
+  </header>
+
+  <section id="top" data-rg="hero" style="position:relative;display:grid;grid-template-columns:1.05fr 0.95fr;align-items:center;gap:48px;padding:88px 40px 72px;max-width:1320px;margin:0 auto">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:10px;padding:7px 12px;border:2px solid #2A2C22;font-family:'Silkscreen',monospace;font-size:11px;letter-spacing:0.1em;color:#C8F702;margin-bottom:28px">
+        <span style="display:block;width:8px;height:8px;background:#C8F702"></span>
+        HONK PROTOCOL · LIVE
+      </div>
+      <h1 data-rg="h1" style="margin:0;font-family:'Archivo Black',sans-serif;font-size:clamp(52px,7.4vw,104px);line-height:0.9;letter-spacing:-0.03em;text-transform:uppercase">
+        A flock of<br>
+        <span style="color:#C8F702">2,000 geese</span><br>
+        with no plan.
+      </h1>
+      <p style="max-width:46ch;margin:26px 0 0;font-size:16px;line-height:1.65;color:#A8AA9C;text-wrap:pretty">
+        Drawn one pixel at a time on a lime background nobody approved. No roadmap, no utility, no phase two — just geese, honking, forever pinned on-chain.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:36px">
+        <a href="#flock" style="padding:16px 26px;background:#C8F702;color:#0B0B09;font-family:'Silkscreen',monospace;font-size:13px;letter-spacing:0.06em" style-hover="background:#E4FF6B">SEE THE FLOCK</a>
+        <a href="https://x.com/rhgoose" target="_blank" rel="noopener" style="padding:16px 26px;border:2px solid #2A2C22;color:#F4F5EE;font-family:'Silkscreen',monospace;font-size:13px;letter-spacing:0.06em" style-hover="border-color:#C8F702;color:#C8F702">FOLLOW @RHGOOSE</a>
+      </div>
+      <div style="display:flex;gap:34px;margin-top:44px;padding-top:26px;border-top:2px solid #1E1F19">
+        <div>
+          <div style="font-family:'Archivo Black',sans-serif;font-size:26px">2,000</div>
+          <div style="font-size:11px;letter-spacing:0.14em;color:#7D7F73;text-transform:uppercase;margin-top:4px">geese</div>
+        </div>
+        <div>
+          <div style="font-family:'Archivo Black',sans-serif;font-size:26px">64</div>
+          <div style="font-size:11px;letter-spacing:0.14em;color:#7D7F73;text-transform:uppercase;margin-top:4px">traits</div>
+        </div>
+        <div>
+          <div style="font-family:'Archivo Black',sans-serif;font-size:26px;color:#C8F702">1</div>
+          <div style="font-size:11px;letter-spacing:0.14em;color:#7D7F73;text-transform:uppercase;margin-top:4px">of one</div>
+        </div>
+      </div>
+    </div>
+
+    <div data-rg="hero-art" style="position:relative;display:flex;justify-content:center">
+      <div style="position:absolute;inset:auto;top:50%;left:50%;transform:translate(-50%,-50%);width:min(520px,86%);aspect-ratio:1;background:#C8F702;opacity:0.13"></div>
+      <div style="position:relative;width:min(460px,100%);animation:rg-bob 5s ease-in-out infinite">
+        <img src="img/goose_0007.png" alt="Robin Goose #0007" style="width:100%;border:3px solid #0B0B09;box-shadow:22px 22px 0 #1E1F19">
+        <div style="position:absolute;bottom:-18px;left:-18px;padding:9px 14px;background:#0B0B09;border:2px solid #C8F702;font-family:'Silkscreen',monospace;font-size:12px;color:#C8F702">#0007</div>
+      </div>
+    </div>
+  </section>
+
+  <div style="display:flex;overflow:hidden;padding:16px 0;background:#C8F702;color:#0B0B09;border-top:3px solid #0B0B09;border-bottom:3px solid #0B0B09">
+    <div style="display:flex;flex:none;gap:34px;padding-right:34px;font-family:'Silkscreen',monospace;font-size:14px;white-space:nowrap;animation:rg-marquee 26s linear infinite">
+      <sc-for list="{{ tickerItems }}" as="word" hint-placeholder-count="16">
+        <span>{{ word }}</span>
+      </sc-for>
+    </div>
+  </div>
+
+  <section id="flock" data-rg="pad" style="padding:96px 40px;max-width:1320px;margin:0 auto">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px">
+      <div>
+        <div style="font-family:'Silkscreen',monospace;font-size:11px;letter-spacing:0.16em;color:#C8F702;margin-bottom:14px">01 — THE FLOCK</div>
+        <h2 data-rg="h2" style="margin:0;font-family:'Archivo Black',sans-serif;font-size:clamp(34px,4.6vw,58px);line-height:0.96;letter-spacing:-0.02em;text-transform:uppercase">Twelve of them,<br>picked at random</h2>
+      </div>
+      <p style="max-width:34ch;margin:0;font-size:14px;line-height:1.7;color:#8E9084">Beaks, hats, sunglasses, and one goose wearing a traffic cone. Click any goose to blow it up.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px">
+      <sc-for list="{{ geese }}" as="g">
+        <button type="button" onClick="{{ g.open }}" style="display:block;padding:0;border:2px solid #1E1F19;background:#111209;cursor:pointer;text-align:left;font-family:inherit" style-hover="border-color:#C8F702">
+          <img src="{{ g.src }}" alt="{{ g.alt }}" style="width:100%;aspect-ratio:1">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 13px;border-top:2px solid #1E1F19">
+            <span style="font-family:'Silkscreen',monospace;font-size:12px;color:#F4F5EE">{{ g.id }}</span>
+            <span style="font-size:10px;letter-spacing:0.12em;color:#7D7F73;text-transform:uppercase">{{ g.trait }}</span>
+          </div>
+        </button>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="numbers" data-rg="pad" style="padding:0 40px 96px;max-width:1320px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2px;background:#1E1F19;border:2px solid #1E1F19">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+        <div style="padding:34px 28px;background:#0B0B09">
+          <div style="font-family:'Archivo Black',sans-serif;font-size:clamp(38px,4.4vw,58px);line-height:1;color:#C8F702">{{ s.value }}</div>
+          <div style="font-family:'Silkscreen',monospace;font-size:11px;letter-spacing:0.12em;color:#F4F5EE;margin-top:14px">{{ s.label }}</div>
+          <div style="font-size:13px;line-height:1.6;color:#8E9084;margin-top:8px">{{ s.note }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="origin" data-rg="pad" style="padding:0 40px 110px;max-width:1320px;margin:0 auto">
+    <div data-rg="origin" style="display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center">
+      <div data-rg="origin-art" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <img src="img/goose_0013.png" alt="Robin Goose #0013" style="width:100%;border:2px solid #1E1F19">
+        <img src="img/goose_0018.png" alt="Robin Goose #0018" style="width:100%;border:2px solid #1E1F19;margin-top:28px">
+        <img src="img/goose_0011.png" alt="Robin Goose #0011" style="width:100%;border:2px solid #1E1F19">
+        <img src="img/goose_0020.png" alt="Robin Goose #0020" style="width:100%;border:2px solid #1E1F19;margin-top:28px">
+      </div>
+      <div>
+        <div style="font-family:'Silkscreen',monospace;font-size:11px;letter-spacing:0.16em;color:#C8F702;margin-bottom:14px">02 — ORIGIN</div>
+        <h2 data-rg="h2" style="margin:0 0 24px;font-family:'Archivo Black',sans-serif;font-size:clamp(34px,4.6vw,58px);line-height:0.96;letter-spacing:-0.02em;text-transform:uppercase">It started with<br>one bad goose</h2>
+        <p style="margin:0 0 18px;font-size:16px;line-height:1.7;color:#A8AA9C;max-width:52ch;text-wrap:pretty">
+          Goose #0001 was drawn as a joke: black head, pink beak, background set to the loudest green in the picker. The joke did not stop. Two thousand geese later, the green stayed.
+        </p>
+        <p style="margin:0 0 18px;font-size:16px;line-height:1.7;color:#A8AA9C;max-width:52ch;text-wrap:pretty">
+          Every goose is 16×16 pixels, hand-placed, no generator smoothing anything over. The rarest trait in the whole flock is a single pair of blue boots. Nine geese have them. Nobody knows why.
+        </p>
+        <blockquote style="margin:32px 0 0;padding:22px 24px;border-left:4px solid #C8F702;background:#111209;font-size:15px;line-height:1.6;color:#F4F5EE">
+          “There is no whitepaper. There is a goose, and the goose is honking.”
+          <div style="font-family:'Silkscreen',monospace;font-size:11px;color:#7D7F73;margin-top:14px">— the artist, probably</div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <footer data-rg="pad" style="border-top:3px solid #C8F702;padding:56px 40px 40px;background:#0B0B09">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px;max-width:1320px;margin:0 auto">
+      <div>
+        <div style="font-family:'Archivo Black',sans-serif;font-size:clamp(30px,4vw,46px);line-height:1;text-transform:uppercase">Honk<span style="color:#C8F702">.</span></div>
+        <p style="margin:14px 0 0;font-size:13px;line-height:1.6;color:#7D7F73;max-width:38ch">Robin Goose is an art project. Not financial advice, not affiliated with anyone, not sorry.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;font-size:13px;letter-spacing:0.06em">
+        <div style="font-family:'Silkscreen',monospace;font-size:11px;letter-spacing:0.14em;color:#7D7F73;text-transform:uppercase">Links</div>
+        <a href="https://x.com/rhgoose" target="_blank" rel="noopener">@rhgoose on X ↗</a>
+        <a href="#flock">Gallery</a>
+        <a href="#origin">Origin</a>
+      </div>
+    </div>
+    <div style="max-width:1320px;margin:44px auto 0;padding-top:20px;border-top:2px solid #1E1F19;font-family:'Silkscreen',monospace;font-size:10px;letter-spacing:0.1em;color:#585A50">© 2026 ROBIN GOOSE · ALL GEESE RESERVED</div>
+  </footer>
+
+  <sc-if value="{{ selected }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ close }}" style="position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:28px;background:rgba(6,6,4,0.9);backdrop-filter:blur(6px);cursor:zoom-out">
+      <div style="width:min(520px,100%)">
+        <img src="{{ selected.src }}" alt="{{ selected.alt }}" style="width:100%;border:3px solid #C8F702">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:#0B0B09;border:3px solid #C8F702;border-top:0;font-family:'Silkscreen',monospace;font-size:13px">
+          <span style="color:#C8F702">{{ selected.id }}</span>
+          <span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#8E9084;text-transform:uppercase">{{ selected.trait }} · CLICK TO CLOSE</span>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { selected: null };
+
+  componentDidMount() {
+    this._esc = (e) => { if (e.key === "Escape") this.setState({ selected: null }); };
+    window.addEventListener("keydown", this._esc);
+  }
+  componentWillUnmount() { window.removeEventListener("keydown", this._esc); }
+
+  renderVals() {
+    const traits = {
+      "0001": "pink beak", "0004": "sunglasses", "0005": "cone hat", "0007": "blue boots",
+      "0011": "crown", "0012": "bandana", "0013": "blue boots", "0014": "cigar",
+      "0017": "halo", "0018": "cap", "0019": "chain", "0020": "monobrow"
+    };
+    const geese = ["0001","0004","0005","0007","0011","0012","0013","0014","0017","0018","0019","0020"].map((n) => {
+      const g = {
+        id: "#" + n,
+        src: "img/goose_" + n + ".png",
+        alt: "Robin Goose #" + n,
+        trait: traits[n] || "unknown"
+      };
+      g.open = () => this.setState({ selected: g });
+      return g;
+    });
+
+    const words = ["HONK","2,000 GEESE","64 TRAITS","NO ROADMAP","16×16 PIXELS","LIME FOREVER","HONK","ONE OF ONE","NO UTILITY","BLUE BOOTS"];
+
+    return {
+      geese,
+      selected: this.state.selected,
+      close: () => this.setState({ selected: null }),
+      tickerItems: [...words, ...words].map((w, i) => (i % 2 ? "·  " + w : w)),
+      stats: [
+        { value: "2,000", label: "TOTAL GEESE", note: "Every one hand-placed, pixel by pixel." },
+        { value: "64", label: "HAND DRAWN TRAITS", note: "Heads, beaks, hats, boots and mistakes." },
+        { value: "9", label: "BLUE BOOTS", note: "The rarest trait in the entire flock." },
+        { value: "1", label: "OF ONE", note: "There is exactly one goose like that goose." }
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>
