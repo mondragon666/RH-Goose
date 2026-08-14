@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Archivo+Black&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  body{margin:0;background:#0B0B09;color:#F4F5EE;font-family:"Space Mono",monospace}
+  img{display:block;image-rendering:pixelated}
+  a{color:#C8F702;text-decoration:none} a:hover{color:#E4FF6B}
+  @media (max-width:900px){ [data-rg="pad"]{padding-left:20px!important;padding-right:20px!important} }
+</style>
+</helmet>
+
+<div data-rg="pad" style="padding:56px 32px 90px;max-width:1240px;margin:0 auto">
+  <div style="font-family:'Silkscreen',monospace;font-size:11px;letter-spacing:0.16em;color:#C8F702;margin-bottom:14px">10 SPECIES × 6 VARIATIONS</div>
+  <h1 style="margin:0 0 14px;font-family:'Archivo Black',sans-serif;font-size:clamp(32px,5vw,58px);line-height:0.98;text-transform:uppercase">Variações</h1>
+  <p style="margin:0 0 20px;max-width:64ch;font-size:15px;line-height:1.7;color:#A8AA9C;text-wrap:pretty">Mesmo esqueleto 16×16 dos gansos, mesmo fundo lime. Cada linha é um bicho; as variações combinam paleta de corpo + um trait (óculos, boné, coroa, bandana, berries). Os traits são peças reutilizáveis — servem para qualquer espécie.</p>
+
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:46px">
+    <sc-for list="{{ traitLegend }}" as="t">
+      <span style="padding:7px 12px;border:2px solid #2A2C22;font-family:'Silkscreen',monospace;font-size:10px;letter-spacing:0.06em;color:#C8F702">{{ t }}</span>
+    </sc-for>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:46px">
+    <sc-for list="{{ groups }}" as="g">
+      <div>
+        <div style="display:flex;align-items:baseline;gap:14px;padding-bottom:12px;margin-bottom:16px;border-bottom:2px solid #1E1F19">
+          <h2 style="margin:0;font-family:'Archivo Black',sans-serif;font-size:24px;text-transform:uppercase">{{ g.name }}</h2>
+          <span style="font-size:12px;color:#7D7F73">{{ g.note }}</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px">
+          <sc-for list="{{ g.items }}" as="v">
+            <div style="border:2px solid #1E1F19;background:#111209">
+              <sc-if value="{{ v.src }}">
+                <img src="{{ v.src }}" alt="{{ v.alt }}" style="width:100%;aspect-ratio:1">
+              </sc-if>
+              <div style="padding:9px 11px;border-top:2px solid #1E1F19;font-size:10px;letter-spacing:0.1em;color:#8E9084;text-transform:uppercase">{{ v.trait }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  renderVals() {
+    const notes = {
+      frog: "olhos brancos saltados, boca larga",
+      cat: "orelhas nos cantos + bigodes de 1px",
+      cow: "manchas retangulares, focinho rosa",
+      rabbit: "orelhas de 3px com miolo rosa",
+      pig: "corpo rosa, focinho escuro com 2 furos",
+      panda: "manchas nos olhos + orelhas pretas",
+      fish: "nadadeiras laterais, barbatana no topo",
+      robot: "antena lime, visor e grade na boca",
+      alien: "olhos 2×3 com brilho, sem boca",
+      owl: "discos de olho brancos, bico triangular"
+    };
+    const traits = ["plain", "shades", "cap", "crown + chain", "bandana + cigar", "berries (rare)"];
+    const groups = Object.keys(notes).map((k) => ({
+      name: k,
+      note: notes[k],
+      items: traits.map((t, i) => ({
+        src: "animals/" + k + "_" + (i + 1) + ".png",
+        trait: t,
+        alt: k + " " + t
+      }))
+    }));
+    return { groups, traitLegend: traits.map((t) => t.toUpperCase()) };
+  }
+}
+
+</script>
+</body>
+</html>
